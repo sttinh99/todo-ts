@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  width: 100%;
+  height: 100vh;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 90vh;
+}
+.app-todos {
+  width: 300px;
+  height: 600px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+  border-radius: 20px;
+}
+.app-todos .add-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 40px;
+}
+.add-item input {
+  height: 15px;
+  padding: 5px 10px 5px;
+  width: 70%;
+  outline: none;
+  margin-right: 5px;
+  font-size: 15px;
+}
+.add-item button {
+  height: 30px;
+  padding: 5px 10px 5px;
+  width: 20%;
+  font-size: 15px;
+}
+/**/
+.app-todos ul {
+  width: 100%;
+  margin: auto;
+  height: 450px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.app-todos ul li {
+  list-style: none;
+  width: 90%;
+  height: 40px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+  display: flex;
+  align-items: center;
+  padding: 0px 15px 0px;
+  justify-content: space-between;
+  margin: auto;
+  margin-bottom: 3px;
+}
+label input {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.delete {
+  text-decoration: none;
+  margin-left: 10px;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+}
+.delete:hover {
+  color: rgb(70, 5, 5);
+}
+ul::-webkit-scrollbar {
+  width: 2px; /* width of the entire scrollbar */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul::-webkit-scrollbar-track {
+  background: rgb(253, 22, 191); /* color of the tracking area */
+}
+
+ul::-webkit-scrollbar-thumb {
+  background-color: blue;
+  border: 1 solid rgb(255, 0, 0);
 }
